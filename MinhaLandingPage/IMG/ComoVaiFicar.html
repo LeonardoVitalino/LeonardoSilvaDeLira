@@ -1,0 +1,206 @@
+
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+.pg{background:#0f0f13;font-family:var(--font-sans);color:#e2e2e8}
+.nav{background:#0f0f13;border-bottom:0.5px solid #2a2a35;padding:0 32px;height:56px;display:flex;align-items:center;justify-content:space-between}
+.nav-logo{color:#fff;font-size:15px;font-weight:500}.nav-logo span{color:#7F77DD}
+.nav-links{display:flex;gap:24px}
+.nav-links a{color:#888;font-size:13px;text-decoration:none;cursor:pointer}
+.nav-links a:hover{color:#e2e2e8}
+.hero{padding:80px 32px 64px;text-align:center;border-bottom:0.5px solid #2a2a35}
+.hero-tag{display:inline-block;background:#1e1b3a;color:#AFA9EC;font-size:12px;padding:4px 14px;border-radius:99px;margin-bottom:20px;border:0.5px solid #534AB7}
+.hero h1{font-size:38px;font-weight:500;color:#fff;line-height:1.2;margin-bottom:12px}
+.hero h1 span{color:#7F77DD}
+.hero p{font-size:15px;color:#888;max-width:440px;margin:0 auto 32px;line-height:1.7}
+.hero-btns{display:flex;gap:12px;justify-content:center}
+.btn-primary{background:#534AB7;color:#fff;border:none;padding:10px 24px;border-radius:8px;font-size:14px;font-weight:500;cursor:pointer}
+.btn-outline{background:transparent;color:#AFA9EC;border:0.5px solid #534AB7;padding:10px 24px;border-radius:8px;font-size:14px;cursor:pointer}
+.avatar{width:80px;height:80px;border-radius:50%;background:#1e1b3a;border:2px solid #534AB7;display:flex;align-items:center;justify-content:center;font-size:22px;font-weight:500;color:#AFA9EC;margin:0 auto 28px}
+.section{padding:56px 32px;border-bottom:0.5px solid #2a2a35}
+.section-label{font-size:11px;text-transform:uppercase;letter-spacing:1.2px;color:#534AB7;margin-bottom:8px}
+.section-title{font-size:22px;font-weight:500;color:#fff;margin-bottom:32px}
+.skills-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:10px}
+.skill-card{background:#16161f;border:0.5px solid #2a2a35;border-radius:8px;padding:16px;text-align:center}
+.skill-card .sk-icon{width:32px;height:32px;border-radius:6px;margin:0 auto 10px;display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:500}
+.sk-js{background:#1e1b3a;color:#AFA9EC}
+.sk-css{background:#0c2038;color:#85B7EB}
+.sk-html{background:#2a1a10;color:#F0997B}
+.sk-git{background:#1a1010;color:#F09595}
+.skill-card p{font-size:13px;color:#aaa}
+.projects-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px}
+.proj-card{background:#16161f;border:0.5px solid #2a2a35;border-radius:12px;padding:20px}
+.proj-tag{font-size:11px;color:#AFA9EC;background:#1e1b3a;padding:3px 10px;border-radius:99px;display:inline-block;margin-bottom:12px}
+.proj-card h3{font-size:15px;font-weight:500;color:#fff;margin-bottom:6px}
+.proj-card p{font-size:13px;color:#777;line-height:1.6;margin-bottom:16px}
+.proj-link{font-size:13px;color:#7F77DD;text-decoration:none;border-bottom:0.5px solid #534AB7;padding-bottom:1px}
+.cep-section{padding:56px 32px;border-bottom:0.5px solid #2a2a35}
+.cep-card{background:#16161f;border:0.5px solid #2a2a35;border-radius:12px;padding:28px;max-width:480px;margin:0 auto}
+.cep-card p{font-size:13px;color:#666;margin-bottom:20px;line-height:1.6}
+.cep-row{display:flex;gap:10px;margin-bottom:0}
+.cep-input{flex:1;height:40px;background:#0f0f13;border:0.5px solid #2a2a35;border-radius:8px;padding:0 14px;font-size:14px;color:#e2e2e8;outline:none}
+.cep-input:focus{border-color:#534AB7}
+.cep-btn{height:40px;padding:0 18px;background:#534AB7;color:#fff;border:none;border-radius:8px;font-size:13px;font-weight:500;cursor:pointer;white-space:nowrap}
+.cep-result{margin-top:16px;background:#0f0f13;border:0.5px solid #2a2a35;border-radius:8px;padding:16px;display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.cep-field label{font-size:10px;text-transform:uppercase;letter-spacing:0.8px;color:#555;display:block;margin-bottom:3px}
+.cep-field span{font-size:14px;color:#e2e2e8}
+.cep-field.full{grid-column:1/-1}
+.contact-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:12px}
+.contact-card{background:#16161f;border:0.5px solid #2a2a35;border-radius:10px;padding:18px}
+.contact-card .cc-label{font-size:11px;color:#555;margin-bottom:4px}
+.contact-card .cc-val{font-size:14px;color:#AFA9EC}
+.footer{padding:32px;text-align:center}
+.footer p{font-size:13px;color:#444}
+.footer span{color:#534AB7}
+</style>
+
+<div class="pg">
+
+  <nav class="nav">
+    <div class="nav-logo"><span>&lt;</span>LeoVitalino<span>/&gt;</span></div>
+    <div class="nav-links">
+      <a>sobre</a>
+      <a>projetos</a>
+      <a>contato</a>
+    </div>
+  </nav>
+
+  <section class="hero">
+    <div class="avatar">LV</div>
+    <div class="hero-tag">disponível para trabalho</div>
+    <h1>Olá, eu sou<br><span>Leonardo Vitalino</span></h1>
+    <p>Desenvolvedor front-end em formação, apaixonado por transformar ideias em interfaces reais com HTML, CSS e JavaScript.</p>
+    <div class="hero-btns">
+      <button class="btn-primary">ver projetos</button>
+      <button class="btn-outline">baixar currículo</button>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-label">habilidades</div>
+    <div class="section-title">Tecnologias que estudo</div>
+    <div class="skills-grid">
+      <div class="skill-card">
+        <div class="sk-icon sk-html">HTML</div>
+        <p>HTML5</p>
+      </div>
+      <div class="skill-card">
+        <div class="sk-icon sk-css">CSS</div>
+        <p>CSS3</p>
+      </div>
+      <div class="skill-card">
+        <div class="sk-icon sk-js">JS</div>
+        <p>JavaScript</p>
+      </div>
+      <div class="skill-card">
+        <div class="sk-icon sk-git">Git</div>
+        <p>Git & GitHub</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-label">projetos</div>
+    <div class="section-title">O que já construí</div>
+    <div class="projects-grid">
+      <div class="proj-card">
+        <span class="proj-tag">HTML + CSS + JS</span>
+        <h3>Buscador de CEP</h3>
+        <p>Aplicação que consome a API ViaCEP e exibe o endereço completo a partir do CEP digitado.</p>
+        <a class="proj-link" href="https://github.com/LeonardoVitalino/TecDev">ver no github</a>
+      </div>
+      <div class="proj-card">
+        <span class="proj-tag">em breve</span>
+        <h3>Próximo projeto</h3>
+        <p>Novo projeto em desenvolvimento. Acompanhe o repositório para novidades em breve.</p>
+        <a class="proj-link" href="#">github</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="cep-section">
+    <div class="section-label">demonstração ao vivo</div>
+    <div style="font-size:22px;font-weight:500;color:#fff;margin-bottom:24px">Busca de CEP integrada</div>
+    <div class="cep-card">
+      <p>Digite um CEP abaixo para ver a integração com a API ViaCEP funcionando em tempo real.</p>
+      <div class="cep-row">
+        <input class="cep-input" id="cep-demo" type="text" placeholder="00000-000" maxlength="9" />
+        <button class="cep-btn" onclick="buscar()">Buscar</button>
+      </div>
+      <div class="cep-result" id="cep-res" style="display:none">
+        <div class="cep-field full">
+          <label>Logradouro</label>
+          <span id="r-rua">—</span>
+        </div>
+        <div class="cep-field">
+          <label>Cidade</label>
+          <span id="r-cidade">—</span>
+        </div>
+        <div class="cep-field">
+          <label>Estado</label>
+          <span id="r-uf">—</span>
+        </div>
+        <div class="cep-field">
+          <label>Bairro</label>
+          <span id="r-bairro">—</span>
+        </div>
+        <div class="cep-field">
+          <label>CEP</label>
+          <span id="r-cep">—</span>
+        </div>
+      </div>
+      <div id="cep-err" style="display:none;margin-top:14px;font-size:13px;color:#E24B4A;text-align:center"></div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-label">contato</div>
+    <div class="section-title">Vamos conversar</div>
+    <div class="contact-grid">
+      <div class="contact-card">
+        <div class="cc-label">GitHub</div>
+        <div class="cc-val">LeonardoVitalino</div>
+      </div>
+      <div class="contact-card">
+        <div class="cc-label">LinkedIn</div>
+        <div class="cc-val">leonardo-vitalino</div>
+      </div>
+      <div class="contact-card">
+        <div class="cc-label">E-mail</div>
+        <div class="cc-val">seu@email.com</div>
+      </div>
+      <div class="contact-card">
+        <div class="cc-label">Localização</div>
+        <div class="cc-val">Limeira, SP</div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <p>feito com <span>HTML, CSS & JS</span> por Leonardo Vitalino</p>
+  </footer>
+
+</div>
+
+<script>
+function buscar(){
+  const cep = document.getElementById('cep-demo').value.replace(/\D/g,'');
+  const err = document.getElementById('cep-err');
+  const res = document.getElementById('cep-res');
+  err.style.display='none';
+  res.style.display='none';
+  if(cep.length !== 8){ err.textContent='Digite um CEP válido com 8 dígitos.'; err.style.display='block'; return; }
+  fetch('https://viacep.com.br/ws/'+cep+'/json/')
+    .then(r=>r.json())
+    .then(d=>{
+      if(d.erro){ err.textContent='CEP não encontrado.'; err.style.display='block'; return; }
+      document.getElementById('r-rua').textContent = d.logradouro || '—';
+      document.getElementById('r-cidade').textContent = d.localidade || '—';
+      document.getElementById('r-uf').textContent = d.uf || '—';
+      document.getElementById('r-bairro').textContent = d.bairro || '—';
+      document.getElementById('r-cep').textContent = d.cep || '—';
+      res.style.display='grid';
+    })
+    .catch(()=>{ err.textContent='Erro ao buscar. Verifique sua conexão.'; err.style.display='block'; });
+}
+document.getElementById('cep-demo').addEventListener('keydown',function(e){ if(e.key==='Enter') buscar(); });
+</script>
