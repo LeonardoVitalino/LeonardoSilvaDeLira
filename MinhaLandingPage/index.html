@@ -86,7 +86,7 @@
                   <h3>Buscador de CEP</h3>
                </div>
                <div class="p-projeto-1">
-               <p>Aplicação que consome a API ViaCEP e exibe o endereço completo a partir do CEP digitado.</p>
+                  <p>Aplicação que consome a API ViaCEP e exibe o endereço completo a partir do CEP digitado.</p>
                </div>
                <div class="link-github-projeto-1">
                   <a href="#">Ver no Github</a>
@@ -113,10 +113,76 @@
 
       </section>
       <section class="demonstração">
+         <div class="demonstração-nome">
+            <span>DEMONSTRAÇÃO AO VIVO</span>
+            <div class="demonstracao-h1">
+               <h1>Busca de CEP integrada</h1>
+            </div>
+         </div>
+         <!-- COMO É UMA CAIXA CENTRAL, EU PRECISO CRIAR UM CARD -->
+         <div class="card-central">
+            <!-- texto explicativo -->
+            <div class="p-card">
+               <p>Digite um CEP abaixo para ver a integração com a API ViaCEP funcionando em tempo real.</p>
+            </div>
+
+            <!-- Aqui agora vamos fazer o imput e o botão -->
+            <div class="search-box">
+               <!-- campo para o usuário digitar o cep -->
+               <input type="text" id="cep-input" placeholder="Digite o CEP">
+               <!-- Aqui eu estou informando que o tipo desse input é texto
+                 o ID para eu poder mexer nele dentro do CSS
+                 e a explicação que fica dentro da caixa para o usuário saber que informação colocar -->
+
+               <!-- fazendo o botão de pesquisar -->
+               <button onclick="buscarCEP()">
+                  <!-- chamando a função buscar cep -->
+                  Buscar
+               </button>
+            </div>
+
+            <!-- fazer resultado -->
+            <div class="resultado-CEP">
+
+
+               <!-- logradouro -->
+               <div class="logradouro">
+                  <span class="label">LOGRADOURO</span>
+                  <P id="logradouro-id">-</P>
+               </div>
+
+
+               <!-- cidade -->
+               <div class="cidade">
+                  <span class="label">CIDADE</span>
+                  <p id="cidade-id">-</p>
+               </div>
+
+                  <!-- BAIRRO -->
+                   <div class="bairro">
+                     <span class="label">BAIRRO</span>
+                     <p id="bairro-id">-</p>
+                   </div>
+
+
+                   <!-- ESTADO-->
+                    <div class="estado">
+                     <span class="label">ESTADO</span>
+                     <p id="estado-id">-</p>
+                    </div>
+
+
+                    <!-- CEP -->
+                     <div class="cep">
+                        <span class="label">CEP</span>
+                        <p id="cep-id">-</p>
+                     </div>
+            </div>
+         </div>
 
       </section>
    </main>
-
+<script src="script.js"></script>
 </body>
 
 </html>
