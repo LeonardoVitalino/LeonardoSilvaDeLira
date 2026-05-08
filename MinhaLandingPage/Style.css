@@ -1,0 +1,11 @@
+/* zerando padrões donavegador*/
+
+*{ 
+    /* esse * significa que eu estou configurando toda a minha pagina HTML */
+    margin: 0;
+    /* Aqui eu estou removendo toda a margem padrão que o navegador coloca automaticamente */
+    padding: 0;
+    /* Aqui eu estou criando um espaço entre a margem e o conteúdo */
+    box-sizing: border-box;
+    
+}
