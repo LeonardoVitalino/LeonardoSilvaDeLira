@@ -7,5 +7,57 @@
     padding: 0;
     /* Aqui eu estou criando um espaço entre a margem e o conteúdo */
     box-sizing: border-box;
+    /* eu ainda nõ coloquei um tamanho, mas assim em que eu colocar, o border faz o conteúdo ficar dentro do tamanho escolhido. */
     
+}
+
+:root {
+  --bg:      #0d0d0f;   /* fundo principal (preto quase total) */
+  --bg2:     #13131a;   /* fundo alternativo (seções escuras) */
+  --bg3:     #1a1a24;   /* fundo de inputs e áreas internas */
+  --card:    #1e1e2e;   /* cor de fundo dos cards */
+  --card2:   #252538;   /* card um pouco mais claro */
+  --border:  #2a2a3d;   /* cor das bordas/linhas divisórias */
+  --purple:  #7c6fcd;   /* roxo principal */
+  --purple2: #9d8fe0;   /* roxo mais claro (hover, destaques) */
+  --orange:  #e07a5f;   /* laranja (labels de seção) */
+  --blue:    #5f9de0;   /* azul (card de CSS) */
+  --green:   #5fe07a;   /* verde (card de JS e bolinha animada) */
+  --text:    #e2e2f0;   /* cor do texto principal */
+  --muted:   #8888aa;   /* texto secundário/apagado */
+  --accent:  #b5a0ff;   /* roxo claro para destaques especiais */
+}
+/* aqui estou fazendo um dando um apelido para cada cor */
+/* ao invés de colocar sempre o código da cor, podemos colocar o apelido que eu dei, por exemplo " --purple" */
+
+/* Configurações globais do site */
+
+body {
+    /*  tudo que estiver dentro do body vai herdar essas configurações */
+    font-family: 'inter', sans-serif;
+    /* Aqui estamos configurando a fonte do texto */
+    /* inter é a fonte principal em que eu quero usar */
+    /* a aspas no Inter serve mais para palavras com espaço, para ele entender que ele interprete como nome da fonte. */
+    /* sans-serif é a fonte reserva */
+    /* caso a fonte 'inter' não carregue, ele me da qualquer fonte se serifa, ( 'pezinhos' que ficam nas letras */
+    background: var(--bg);
+    /* estou definindo a cor de fundo da página */
+    /* importante, sempre que eu precisar colocar uma cor com apelido eu preciso chamar o VAR */
+    color: var(--text);
+    /* Essa color ela foi criada especificamente para muda cor de texto 
+    curiosidade: color é para mudar cores de letras, textos, conteúdo textual em si. 
+    agora para eu querer mudar a cor do site, por exemplo eu preciso usar o background ou background-color */
+
+}
+
+a {
+    /* Aqui vamos estilizar todas as tags <a>, que são os links da pagina 
+    Então aqui eu seleciono todos os links*/
+    text-decoration: none;
+    /* aqui estou removendo a decoração padrão de texto, nos link isso normalmente siginifica 
+    REMOVER O SUBLINHADO*/
+    color: inherit;
+    /* aqui ele está dizendo, HERDE A COR DO ELEMENTO PAI */
+    /* normalmente os links por natureza ficam azuis, mas com esse código o css entenede que eu quero aa cor do meus links 
+    na mesma cor que eu dei no color do body ( elemento pai) */
 }
