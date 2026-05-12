@@ -4,7 +4,7 @@
     /* esse * significa que eu estou configurando toda a minha pagina HTML */
     margin: 0;
     /* Aqui eu estou removendo toda a margem padrão que o navegador coloca automaticamente */
-    padding: 0;
+    padding:0;
     /* Aqui eu estou criando um espaço entre a margem e o conteúdo */
     box-sizing: border-box;
     /* eu ainda nõ coloquei um tamanho, mas assim em que eu colocar, o border faz o conteúdo ficar dentro do tamanho escolhido. */
@@ -60,4 +60,34 @@ a {
     /* aqui ele está dizendo, HERDE A COR DO ELEMENTO PAI */
     /* normalmente os links por natureza ficam azuis, mas com esse código o css entenede que eu quero aa cor do meus links 
     na mesma cor que eu dei no color do body ( elemento pai) */
+}
+
+/* HEADER 
+Barra de navegação fixa no topo */
+header {
+    position: sticky;
+    /* aqui estou fazendo o elemento grudar na tela, ou seja
+    posso rodar a tela até embaixo no footer, porém 
+    meu header vai continuar aparecendo no topo, grudado */
+    top: 0;
+    /* aqui está definindo onde eu quero que o header gruda
+    como ele é um menu, quero que ele fique grudado no topo do site, ou seja
+    top:0 */
+    z-index: 100;
+    /* aqui eu estou informando que o header precisa ficar na frente de tudo
+    imagem, texto, cards e etc. Por isso eu coloquei o 100 */
+    background: rgba(13, 13, 15, 0.85);
+    /* Aqui eu estou colocando uma cor no header, mas tem algo especial
+     rgba significa : red, green, blue e alpha, porém como os numero são muito baixos a cor mostrada é quase preta (13, 13, 15)
+     esse 0,85 significa uma transparência, ela vai servir para eu enxergar levemente o que está atrás do header.
+     */
+    backdrop-filter: blur(12px);
+    /* como o header fica um pouco transparente, com esse código agora ele vai borrar um pouco o que estiver atrás dela
+    essae BLUr está denfindo a intensidade do desfoque */
+    border-bottom: 1px solid var(--border);
+    /* aqui estou optando por colocar uma borda somente em baixo do header, 
+    funciona como se estivesse dividindo mesmo o header com a próxima section
+    1px significa a expessura da borda
+    solid é o tipo de linha, mas pode ser Solid, Dashed, ou Dotted
+    var (--border) está definindo a cor dessa linha  */
 }
